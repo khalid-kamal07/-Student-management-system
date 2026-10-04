@@ -1,0 +1,23 @@
+{
+  "name": "student-management-system",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "dev": "concurrently \"nodemon backend/server.js\" \"npm --prefix frontend run dev\"",
+    "build": "npm --prefix frontend run build",
+    "seed": "node backend/seed.js",
+    "install-all": "npm install && npm --prefix frontend install"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "mongoose": "^8.9.5"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9"
+  }
+}
